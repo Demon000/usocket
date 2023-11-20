@@ -464,7 +464,7 @@ namespace uwrap {
 
 				// Create a buffer of any read data.
 				v8::Local<v8::Value> buffer = Nan::Undefined();
-				if (res == 0 || !Nan::NewBuffer(static_cast<char*>(iov[0].iov_base), res).ToLocal(&buffer))
+				if (res == 0 || !Nan::CopyBuffer(static_cast<char*>(iov[0].iov_base), res).ToLocal(&buffer))
 					free(iov[0].iov_base);
 
 				// Convert the descriptors into a v8 array
