@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhs67/usocket.git"
+    "url": "git+https://github.com/Demon000/usocket.git"
   },
   "keywords": [
     "unix",
@@ -20,12 +20,12 @@
     "file",
     "descriptor"
   ],
-  "author": "Jon Spencer <jon@jonspencer.ca>",
+  "author": "Cosmin Tanislav <demonsingur@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jhs67/usocket/issues"
+    "url": "https://github.com/Demon000/usocket/issues"
   },
-  "homepage": "https://github.com/jhs67/usocket#readme",
+  "homepage": "https://github.com/Demon000/usocket#readme",
   "devDependencies": {
     "mocha": "^9.2.2"
   },
