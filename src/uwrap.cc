@@ -251,7 +251,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(pause) {
-			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.Holder());
+			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.This());
 			wrap->_pause();
 		}
 
@@ -264,7 +264,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(resume) {
-			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.Holder());
+			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.This());
 			wrap->_resume();
 		}
 
@@ -286,7 +286,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(close) {
-			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.Holder());
+			SubClass* wrap = Nan::ObjectWrap::Unwrap<SubClass>(info.This());
 			wrap->_close();
 		}
 
@@ -396,7 +396,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(listen) {
-			UServerWrap* wrap = Nan::ObjectWrap::Unwrap<UServerWrap>(info.Holder());
+			UServerWrap* wrap = Nan::ObjectWrap::Unwrap<UServerWrap>(info.This());
 			wrap->_listen(*Nan::Utf8String(info[0]), info[1]->Int32Value(Nan::GetCurrentContext()).FromMaybe(0));
 		}
 
@@ -547,7 +547,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(connect) {
-			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.Holder());
+			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.This());
 			Nan::Utf8String path(info[0]);
 			wrap->_connect(string(*path, path.length()));
 		}
@@ -562,7 +562,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(adopt) {
-			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.Holder());
+			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.This());
 			wrap->_adopt(info[0]->Int32Value(Nan::GetCurrentContext()).FromMaybe(-1));
 		}
 
@@ -615,7 +615,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(write) {
-			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.Holder());
+			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.This());
 
 			size_t len = 0;
 			char *data = nullptr;
@@ -657,7 +657,7 @@ namespace uwrap {
 		}
 
 		static NAN_METHOD(shutdown) {
-			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.Holder());
+			USocketWrap* wrap = Nan::ObjectWrap::Unwrap<USocketWrap>(info.This());
 			wrap->_shutdown();
 		}
 

@@ -1,10 +1,9 @@
 {
   "name": "@tanislav000/usocket",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "unix local sockets with descriptor passing",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec",
     "configure": "node-gyp configure",
     "build": "node-gyp build",
     "rebuild": "node-gyp rebuild"
@@ -26,13 +25,10 @@
     "url": "https://github.com/Demon000/usocket/issues"
   },
   "homepage": "https://github.com/Demon000/usocket#readme",
-  "devDependencies": {
-    "mocha": "^9.2.2"
-  },
   "dependencies": {
     "bindings": "^1.5.0",
-    "debug": "^4.3.4",
-    "nan": "^2.18.0",
-    "node-gyp": "^10.0.1"
+    "debug": "^4.4.0",
+    "nan": "^2.22.2",
+    "node-gyp": "^11.1.0"
   }
 }
