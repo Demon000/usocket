@@ -61,7 +61,7 @@ USocket.prototype._write = function(chunk, encoding, callback) {
 
 	debug("USocket._write", data && data.length, fds);
 	var r = this._wrap.write(data, fds);
-	if (util.isError(r)) {
+	if (util.types.isNativeError(r)) {
 		debug("USocket._write error", r);
 		return callback(r);
 	}
